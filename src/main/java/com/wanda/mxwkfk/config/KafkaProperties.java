@@ -8,6 +8,7 @@ import java.util.Properties;
 
 import org.apache.kafka.clients.consumer.Consumer;
 
+@Deprecated
 public class KafkaProperties {
 
 	public static final Properties properties1 = new Properties();

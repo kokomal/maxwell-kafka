@@ -1,5 +1,6 @@
 package com.wanda.mxwkfk.core;
 
+@Deprecated
 public class Cache {
 	private static Cache instance = null;
 	private boolean kafkaThreadStatus = true;

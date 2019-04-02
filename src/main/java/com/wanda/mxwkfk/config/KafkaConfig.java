@@ -23,8 +23,17 @@ public class KafkaConfig {
 	@Value("${value.deserializer}")
 	public String valueDeserializer;
 	
+	@Value("${kakfa.topics}")
+	public String kafkaTopics;
+	@Value("${kakfa.brokers}")
+	public String kafkaBrokers;
+	@Value("${zookeeperlist.server}")
+	public String zkServer;
+	@Value("${zookeeperlist.port}")
+	public String zkPort;
+	
 	@Deprecated
-	@Bean(name="prop1")
+	@Bean(name="kafkaProps1")
 	public Properties prop1() {
 		Properties properties1 = new Properties();
 		properties1.put("bootstrap.servers", "192.168.0.14:9092,192.168.0.15:9092");// 172.16.2.112,172.16.2.113
@@ -37,8 +46,8 @@ public class KafkaConfig {
 		return properties1;
 	}
 	
-	@Bean(name="prop2")
-	public Properties prop2() {
+	@Bean(name="kafkaProps2")
+	public Properties kafkaProperties() {
 		Properties properties1 = new Properties();
 		properties1.put("bootstrap.servers", bootStrapServers);// 172.16.2.112,172.16.2.113
 		properties1.put("group.id", groupId);
