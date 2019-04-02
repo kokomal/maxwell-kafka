@@ -1,0 +1,26 @@
+#ENVIRONMENT
+bootstrap:
+  servers: 192.168.0.14:9092,192.168.0.15:9092
+group:
+  id: test
+enable:
+  auto:
+    commit: false
+session:
+  timeout:
+    ms: 30000
+max:
+  poll:
+    records: 100
+key:
+  deserializer: org.apache.kafka.common.serialization.StringDeserializer
+value:
+  deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  
+#KAFKA
+kafka:
+  brokers: 192.168.0.14:9092,192.168.0.15:9092
+  topics: maxwell
+zookeeperlist:
+  server: 192.168.0.13,192.168.0.14
+  port: 2181
