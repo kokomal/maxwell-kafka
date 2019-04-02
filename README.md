@@ -1,0 +1,2 @@
+# maxwell-kafka
+maxwell框架通过kafka消息队列对mysql的binlog进行解析并且入库hbase
